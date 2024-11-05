@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/img_24"
+    tools:context=".BookHotel"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/img_24"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="1dp"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F9F4F8"
+            tools:ignore="UselessLeaf,UselessParent">
+
+            <TextView
+                android:id="@+id/tvHotelName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Hotel Name"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/etHotelName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="Enter Hotel Name"
+                android:inputType="text"
+                android:minHeight="48dp"
+                tools:ignore="Autofill,HardcodedText,TextContrastCheck,VisualLintTextFieldSize" />
+
+            <TextView
+                android:id="@+id/tvHotelLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Location: "
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/etHotelLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="Enter Location"
+                android:inputType="text"
+                android:minHeight="48dp"
+                tools:ignore="Autofill,HardcodedText,TextContrastCheck,VisualLintTextFieldSize" />
+
+            <TextView
+                android:id="@+id/tvCheckInDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Check-in Date: "
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/etCheckInDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="Enter Check-in Date"
+                android:inputType="text"
+                android:minHeight="48dp"
+                tools:ignore="Autofill,HardcodedText,TextFields,TextContrastCheck,VisualLintTextFieldSize" />
+
+            <TextView
+                android:id="@+id/tvCheckOutDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Check-out Date: "
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/etCheckOutDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="Enter Check-out Date"
+                android:inputType="text"
+                android:minHeight="48dp"
+                tools:ignore="Autofill,HardcodedText,TextFields,TextContrastCheck,VisualLintTextFieldSize" />
+
+            <TextView
+                android:id="@+id/tvNumOfGuests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Number of Guests: "
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/etNumOfGuests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="Enter Number of Guests"
+                android:inputType="number"
+                android:minHeight="48dp"
+                tools:ignore="Autofill,HardcodedText,TextContrastCheck,VisualLintTextFieldSize" />
+
+            <Button
+                android:id="@+id/btnBookHotel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Book Hotel"
+                android:background="#008000"
+                android:textColor="#FFFFFF"
+                tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_11"
+    android:orientation="vertical"
+    tools:context=".Dashboard">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvGuestList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"
+        tools:listitem="@layout/item_guest" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btnAddGuest"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Add Guest"
+            android:background="#008000"
+            android:minWidth="100dp"
+            android:layout_marginEnd="5dp"
+            tools:ignore="ButtonStyle,HardcodedText,VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/GuestInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Guest Info"
+            android:background="#008000"
+            android:minWidth="100dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="5dp"
+            tools:ignore="ButtonStyle,HardcodedText,VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/BookHotel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Book Hotel"
+            android:background="#008000"
+            android:minWidth="100dp"
+            android:layout_marginStart="8dp"
+            tools:ignore="ButtonStyle,HardcodedText,VisualLintButtonSize" />
+
+    </LinearLayout>
+
+</LinearLayout>

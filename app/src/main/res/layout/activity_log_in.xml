@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/img_8"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".LogIn">
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:gravity="center"
+        android:inputType="textAutoCorrect"
+        android:padding="16dp"
+        android:text="Welcome back to login!"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,TextContrastCheck,TextViewEdits" />
+
+
+
+        <ImageView
+            android:id="@+id/logoImageView2"
+            android:layout_width="match_parent"
+            android:layout_height="179dp"
+            android:contentDescription="Image"
+            android:src="@drawable/img_14"
+            tools:ignore="ContentDescription,HardcodedText,ImageContrastCheck" />
+
+
+
+    <EditText
+        android:id="@+id/usernameEditText1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_background"
+        android:hint="Email"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:inputType="textAutoCorrect"
+        android:textColor="#000000"
+        android:textColorHint="#546E7A"
+        android:textSize="16sp"
+        tools:ignore="Autofill,HardcodedText,TextFields" />
+
+
+    <EditText
+        android:id="@+id/passwordEditText2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_background"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:textColor="#000000"
+        android:textColorHint="#546E7A"
+        android:textSize="16sp"
+        tools:ignore="Autofill,HardcodedText,TextFields" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="30sp"
+        android:background="#008000"
+        tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+    <TextView
+        android:id="@+id/forgotPasswordTextView"
+        android:layout_width="wrap_content"
+       android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Forgot Password"
+        android:textColor="#0000A5"
+        android:textSize="15sp"
+        tools:ignore="HardcodedText,TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/registerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have an Account?Register"
+        android:textColor="#0000A5"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        tools:ignore="HardcodedText" />
+
+
+
+</LinearLayout>

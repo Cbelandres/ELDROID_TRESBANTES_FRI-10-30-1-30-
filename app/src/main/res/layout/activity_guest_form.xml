@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_8"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".GuestForm">
+
+    <ImageView
+        android:layout_width="303dp"
+        android:layout_height="146dp"
+        android:src="@drawable/img_2"
+        tools:ignore="ContentDescription" />
+
+    <EditText
+        android:id="@+id/etGuestName"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_background"
+        android:hint="Full Name"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textColorHint="#546E7A"
+        android:textSize="16sp"
+        tools:ignore="Autofill,HardcodedText" />
+
+    <EditText
+        android:id="@+id/etGuestEmail"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_background"
+        android:hint="Email Address"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:inputType="textEmailAddress"
+        android:textColor="#000000"
+        android:textColorHint="#546E7A"
+        android:textSize="16sp"
+        tools:ignore="Autofill,HardcodedText,TextFields" />
+
+    <EditText
+        android:id="@+id/etTimeIn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_background"
+        android:hint="Time In"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:inputType="time"
+        android:textColor="#000000"
+        android:textColorHint="#546E7A"
+        android:textSize="16sp"
+        tools:ignore="Autofill,HardcodedText,TextFields" />
+
+    <EditText
+        android:id="@+id/etDate"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_background"
+        android:hint="Date"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:inputType="date"
+        android:textColor="#000000"
+        android:textColorHint="#546E7A"
+        android:textSize="16sp"
+        tools:ignore="Autofill,HardcodedText,TextFields" />
+
+    <EditText
+        android:id="@+id/etNumber"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_background"
+        android:hint="Number"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:inputType="phone"
+        android:textColor="#000000"
+        android:textColorHint="#546E7A"
+        android:textSize="16sp"
+        tools:ignore="Autofill,HardcodedText,TextFields" />
+
+    <EditText
+        android:id="@+id/etAge"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_background"
+        android:hint="Age"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:inputType="number"
+        android:textColor="#000000"
+        android:textColorHint="#546E7A"
+        android:textSize="16sp"
+        tools:ignore="Autofill,HardcodedText,TextFields" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Submit"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>

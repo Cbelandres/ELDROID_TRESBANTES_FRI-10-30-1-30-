@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name" translatable="false">GuestLogApp</string>
+    <string name="guest_image_description" />
+</resources>

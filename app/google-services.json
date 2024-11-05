@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "738139422002",
+    "project_id": "guestlogapp",
+    "storage_bucket": "guestlogapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738139422002:android:87bbad0bbd5fc32e0deb2b",
+        "android_client_info": {
+          "package_name": "com.example.guestlogapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBa8WNwg12vavtYnvDWehuSh-4TWmn-rE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

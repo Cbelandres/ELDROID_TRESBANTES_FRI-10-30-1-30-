@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GuestInfo"
+    android:orientation="vertical"
+    tools:ignore="VisualLintBounds">
+
+    <!-- Header TextView -->
+    <TextView
+        android:id="@+id/headerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="List of Guest"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        tools:ignore="HardcodedText" />
+
+    <!-- List of Guest -->
+    <ListView
+        android:id="@+id/GuestInfoListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Guest Details Layout (Initially Hidden) -->
+    <LinearLayout
+        android:id="@+id/GuestDetailsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <!-- Guest Image -->
+        <ImageView
+            android:id="@+id/GuestImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            tools:ignore="ContentDescription,HardcodedText"
+            android:contentDescription="Guest Image" />
+
+        <!-- Guest Details -->
+        <TextView
+            android:id="@+id/GuestNumberTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guest Number: "
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/GuestNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guest Name: "
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/GuestTypeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guest Type: "
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/transactionHistoryTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transaction History"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            tools:ignore="HardcodedText" />
+
+        <!-- Transaction History -->
+        <ListView
+            android:id="@+id/transactionListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+</LinearLayout>

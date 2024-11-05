@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#F4F5ED "
+        android:padding="16dp"
+        tools:ignore="UselessLeaf">
+
+        <ImageView
+            android:id="@+id/GuestImageView"
+            android:src="@drawable/guest1_image"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="ContentDescription">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tvGuestName"
+            android:textColor="#060606"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guest Name"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tvGuestEmail"
+            android:textColor="#060606"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guest Email:"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tvTimeIn"
+            android:textColor="#060606"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time In:"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:textColor="#060606"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date:"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tvNumber"
+            android:textColor="#060606 "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Number:"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tvAge"
+            android:textColor="#060606  "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Age:"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Edit"
+            tools:ignore="ButtonStyle,HardcodedText,VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Delete"
+            tools:ignore="ButtonStyle,HardcodedText,VisualLintButtonSize" />
+    </LinearLayout>
+</LinearLayout>

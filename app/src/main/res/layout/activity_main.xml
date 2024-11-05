@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="@drawable/img_8"
+    tools:context=".MainActivity">
+
+
+
+        <ImageView
+            android:id="@+id/logoImageView2"
+            android:layout_width="match_parent"
+            android:layout_height="179dp"
+            android:contentDescription="Image"
+            android:src="@drawable/img_14"
+            tools:ignore="ContentDescription,HardcodedText,ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/textViewOverlay"
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="GUESTLOG"
+            android:textAlignment="center"
+            android:textColor="#EE07B6 "
+            android:textSize="50sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Login"
+        android:textSize="30sp"
+        android:background="@drawable/button_bg_selector"
+        tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp"
+        android:text="Register"
+        android:background="#008000"
+        tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+
+</LinearLayout>
