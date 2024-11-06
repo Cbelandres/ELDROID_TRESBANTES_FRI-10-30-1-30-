@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPressed">#FF0000</color> <!-- Red color when pressed -->
-    <color name="colorFocused">#00FF00</color> <!-- Green color when focused -->
-    <color name="colorEnabled">#0000FF</color> <!-- Blue color when enabled -->
-    <color name="colorDefault">#FFFFFF</color> <!-- White color by default -->
-    <color name="black">#000000</color> <!-- Black color -->
-    <color name="button_background_color">#FC20B0</color> <!-- Custom button background color -->
+    <!-- Primary Colors -->
+    <color name="colorPrimary">#6EC1E4</color>
+    <color name="colorPrimaryDark">#003366</color>
+    <color name="colorAccent">#FFAB40</color>
 
-    <color name="colorStatePressed">#FF0000</color> <!-- Red color for pressed state -->
-    <color name="colorStateEnabled">#FFFF00</color> <!-- Yellow color for enabled state -->
-    <color name="colorStateNotEnabled">#808080</color> <!-- Grey color for disabled state -->
+    <!-- Additional Colors -->
+    <color name="colorSecondary">#1A73E8</color>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorSurface">#F0F0F0</color>
+    <color name="colorSuccess">#008080</color>
+    <color name="colorWarning">#FFF4C1</color>
 </resources>

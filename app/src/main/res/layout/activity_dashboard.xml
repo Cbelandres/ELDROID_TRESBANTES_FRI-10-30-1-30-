@@ -2,8 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/img_11"
     android:orientation="vertical"
+    android:layout_marginTop="30dp"
     tools:context=".Dashboard">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -19,41 +19,37 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/rounded_item_background"
         android:gravity="center_horizontal">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnAddGuest"
+            style="@style/Widget.GuestLogApp.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Add Guest"
-            android:background="#008000"
-            android:minWidth="100dp"
-            android:layout_marginEnd="5dp"
-            tools:ignore="ButtonStyle,HardcodedText,VisualLintButtonSize" />
+            android:text="Add  Guest"
+            android:layout_marginEnd="5dp" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/GuestInfo"
+            style="@style/Widget.GuestLogApp.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Guest Info"
-            android:background="#008000"
-            android:minWidth="100dp"
             android:layout_marginStart="8dp"
-            android:layout_marginEnd="5dp"
-            tools:ignore="ButtonStyle,HardcodedText,VisualLintButtonSize" />
+            android:layout_marginEnd="5dp" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/BookHotel"
+            style="@style/Widget.GuestLogApp.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Book Hotel"
-            android:background="#008000"
-            android:minWidth="100dp"
-            android:layout_marginStart="8dp"
-            tools:ignore="ButtonStyle,HardcodedText,VisualLintButtonSize" />
+            android:layout_marginStart="8dp" />
 
     </LinearLayout>
 

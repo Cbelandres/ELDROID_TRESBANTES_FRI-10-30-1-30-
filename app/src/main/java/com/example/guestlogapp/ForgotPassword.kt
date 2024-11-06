@@ -1,5 +1,6 @@
 package com.example.guestlogapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -20,6 +21,7 @@ class ForgotPassword : AppCompatActivity() {
 
         val emailEditText = findViewById<EditText>(R.id.emailEditText)
         val sendResetEmailButton = findViewById<Button>(R.id.sendResetEmailButton)
+        val cancelButton = findViewById<Button>(R.id.cancelButton)
 
         sendResetEmailButton.setOnClickListener {
             val email = emailEditText.text.toString().trim()
@@ -53,6 +55,10 @@ class ForgotPassword : AppCompatActivity() {
                     Toast.LENGTH_SHORT
                 ).show()
             }
+        }
+        cancelButton.setOnClickListener {
+            // Navigate back to the LogIn
+            startActivity(Intent(this, LogIn::class.java))
         }
     }
 }

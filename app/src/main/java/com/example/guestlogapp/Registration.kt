@@ -24,10 +24,11 @@ class Registration : AppCompatActivity() {
         val fullNameEditText = findViewById<EditText>(R.id.editTextFullName)
         val userNameEditText = findViewById<EditText>(R.id.editTextUserName)
         val passwordEditText = findViewById<EditText>(R.id.editTextPassword)
-        val confirmPasswordEditText = findViewById<EditText>(R.id.editTextComfirmPassword)
+        val confirmPasswordEditText = findViewById<EditText>(R.id.editTextConfirmPassword)
         val emailEditText = findViewById<EditText>(R.id.editTextEmail)
         val phoneNumberEditText = findViewById<EditText>(R.id.editTextPhoneNumber)
         val registerButton = findViewById<Button>(R.id.buttonRegister)
+        val cancelButton = findViewById<Button>(R.id.buttonCancel)
 
         registerButton.setOnClickListener {
             val fullName = fullNameEditText.text.toString().trim()
@@ -65,6 +66,10 @@ class Registration : AppCompatActivity() {
                         }
                     }
             }
+        }
+        cancelButton.setOnClickListener {
+            // Navigate back to the Main
+            startActivity(Intent(this, MainActivity::class.java))
         }
     }
 

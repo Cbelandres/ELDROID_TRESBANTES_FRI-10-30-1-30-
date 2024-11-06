@@ -6,18 +6,18 @@
     android:orientation="vertical"
     tools:ignore="VisualLintBounds">
 
-    <!-- Header TextView -->
     <TextView
         android:id="@+id/headerTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="List of Guest"
-        android:textSize="20sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="30sp"
+        android:textStyle="bold"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         tools:ignore="HardcodedText" />
 
-    <!-- List of Guest -->
     <ListView
         android:id="@+id/GuestInfoListView"
         android:layout_width="match_parent"
@@ -33,7 +33,6 @@
         android:visibility="gone"
         android:orientation="vertical">
 
-        <!-- Guest Image -->
         <ImageView
             android:id="@+id/GuestImageView"
             android:layout_width="100dp"
@@ -43,7 +42,6 @@
             tools:ignore="ContentDescription,HardcodedText"
             android:contentDescription="Guest Image" />
 
-        <!-- Guest Details -->
         <TextView
             android:id="@+id/GuestNumberTextView"
             android:layout_width="wrap_content"
@@ -85,7 +83,6 @@
             android:layout_marginTop="20dp"
             tools:ignore="HardcodedText" />
 
-        <!-- Transaction History -->
         <ListView
             android:id="@+id/transactionListView"
             android:layout_width="match_parent"

@@ -1,137 +1,209 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/img_24"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorSurface"
     tools:context=".BookHotel"
-    android:orientation="vertical"
     android:padding="16dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+
+    <TextView
+        android:id="@+id/BookHotelTextView"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/img_24"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="Book Hotel"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvHotelName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_marginTop="1dp"
-            android:padding="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#F9F4F8"
-            tools:ignore="UselessLeaf,UselessParent">
+    <TextView
+        android:id="@+id/tvHotelName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="124dp"
+        android:text="Hotel Name:"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
-            <TextView
-                android:id="@+id/tvHotelName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:text="Hotel Name"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="8dp"
-                tools:ignore="HardcodedText" />
+    <EditText
+        android:id="@+id/etHotelName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Hotel Name"
+        android:inputType="text"
+        android:background="@drawable/edittext_background"
+        android:minHeight="48dp"
+        android:layout_marginBottom="16dp"
+        android:paddingLeft="12dp"
+        app:layout_constraintTop_toBottomOf="@id/tvHotelName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="Autofill,HardcodedText,TextContrastCheck,VisualLintTextFieldSize" />
 
-            <EditText
-                android:id="@+id/etHotelName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:hint="Enter Hotel Name"
-                android:inputType="text"
-                android:minHeight="48dp"
-                tools:ignore="Autofill,HardcodedText,TextContrastCheck,VisualLintTextFieldSize" />
+    <TextView
+        android:id="@+id/tvHotelLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Location:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etHotelName"
+        tools:ignore="HardcodedText" />
 
-            <TextView
-                android:id="@+id/tvHotelLocation"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Location: "
-                android:textSize="14sp"
-                android:layout_marginBottom="8dp"
-                tools:ignore="HardcodedText" />
+    <EditText
+        android:id="@+id/etHotelLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Location"
+        android:inputType="text"
+        android:background="@drawable/edittext_background"
+        android:minHeight="48dp"
+        android:paddingLeft="12dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvHotelLocation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="Autofill,HardcodedText,TextContrastCheck,VisualLintTextFieldSize" />
 
-            <EditText
-                android:id="@+id/etHotelLocation"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:hint="Enter Location"
-                android:inputType="text"
-                android:minHeight="48dp"
-                tools:ignore="Autofill,HardcodedText,TextContrastCheck,VisualLintTextFieldSize" />
+    <TextView
+        android:id="@+id/tvCheckInDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Check-in Date:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/etHotelLocation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="HardcodedText" />
 
-            <TextView
-                android:id="@+id/tvCheckInDate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Check-in Date: "
-                android:textSize="14sp"
-                android:layout_marginBottom="8dp"
-                tools:ignore="HardcodedText" />
+    <EditText
+        android:id="@+id/etCheckInDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Check-in Date"
+        android:inputType="text"
+        android:background="@drawable/edittext_background"
+        android:minHeight="48dp"
+        android:paddingLeft="12dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvCheckInDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="Autofill,HardcodedText,TextFields,TextContrastCheck,VisualLintTextFieldSize" />
 
-            <EditText
-                android:id="@+id/etCheckInDate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:hint="Enter Check-in Date"
-                android:inputType="text"
-                android:minHeight="48dp"
-                tools:ignore="Autofill,HardcodedText,TextFields,TextContrastCheck,VisualLintTextFieldSize" />
+    <TextView
+        android:id="@+id/tvCheckOutDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Check-out Date:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/etCheckInDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="HardcodedText" />
 
-            <TextView
-                android:id="@+id/tvCheckOutDate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Check-out Date: "
-                android:textSize="14sp"
-                android:layout_marginBottom="8dp"
-                tools:ignore="HardcodedText" />
+    <EditText
+        android:id="@+id/etCheckOutDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Check-out Date"
+        android:inputType="text"
+        android:background="@drawable/edittext_background"
+        android:minHeight="48dp"
+        android:paddingLeft="12dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvCheckOutDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="Autofill,HardcodedText,TextFields,TextContrastCheck,VisualLintTextFieldSize" />
 
-            <EditText
-                android:id="@+id/etCheckOutDate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:hint="Enter Check-out Date"
-                android:inputType="text"
-                android:minHeight="48dp"
-                tools:ignore="Autofill,HardcodedText,TextFields,TextContrastCheck,VisualLintTextFieldSize" />
+    <TextView
+        android:id="@+id/tvNumOfGuests"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Number of Guests:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/etCheckOutDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="HardcodedText" />
 
-            <TextView
-                android:id="@+id/tvNumOfGuests"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Number of Guests: "
-                android:textSize="14sp"
-                android:layout_marginBottom="8dp"
-                tools:ignore="HardcodedText" />
+    <EditText
+        android:id="@+id/etNumOfGuests"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Number of Guests"
+        android:inputType="number"
+        android:background="@drawable/edittext_background"
+        android:minHeight="48dp"
+        android:paddingLeft="12dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintTop_toBottomOf="@id/tvNumOfGuests"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="Autofill,HardcodedText,TextContrastCheck,VisualLintTextFieldSize" />
 
-            <EditText
-                android:id="@+id/etNumOfGuests"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:hint="Enter Number of Guests"
-                android:inputType="number"
-                android:minHeight="48dp"
-                tools:ignore="Autofill,HardcodedText,TextContrastCheck,VisualLintTextFieldSize" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBookHotel"
+        style="@style/Widget.GuestLogApp.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Book Hotel"
+        app:layout_constraintTop_toBottomOf="@id/etNumOfGuests"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-            <Button
-                android:id="@+id/btnBookHotel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Book Hotel"
-                android:background="#008000"
-                android:textColor="#FFFFFF"
-                tools:ignore="HardcodedText,VisualLintButtonSize" />
+    <TextView
+        android:id="@+id/footerTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="© 2024 GuestLog Inc. | Version 1.0"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-        </LinearLayout>
-
-    </LinearLayout>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

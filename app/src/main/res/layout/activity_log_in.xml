@@ -1,108 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/img_8"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="16dp"
+    android:background="@color/colorSurface"
     tools:context=".LogIn">
 
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:text="Welcome back to login!"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/logoImageView2"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/applogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcomeTextView"
+        tools:ignore="ContentDescription,HardcodedText,ImageContrastCheck" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
-        android:gravity="center"
-        android:inputType="textAutoCorrect"
-        android:padding="16dp"
-        android:text="Welcome back to login!"
-        android:textColor="@color/black"
-        android:textSize="20sp"
+        android:layout_marginLeft="10dp"
+        android:text="Email:"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
         android:textStyle="bold"
-        tools:ignore="HardcodedText,TextContrastCheck,TextViewEdits" />
-
-
-
-        <ImageView
-            android:id="@+id/logoImageView2"
-            android:layout_width="match_parent"
-            android:layout_height="179dp"
-            android:contentDescription="Image"
-            android:src="@drawable/img_14"
-            tools:ignore="ContentDescription,HardcodedText,ImageContrastCheck" />
-
-
+        app:layout_constraintBottom_toTopOf="@+id/usernameEditText1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoImageView2" />
 
     <EditText
         android:id="@+id/usernameEditText1"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/edittext_background"
-        android:hint="Email"
-        android:minHeight="48dp"
+        android:layout_marginTop="24dp"
+        android:hint="Enter Email"
+        android:inputType="textEmailAddress"
         android:padding="12dp"
-        android:inputType="textAutoCorrect"
-        android:textColor="#000000"
-        android:textColorHint="#546E7A"
-        android:textSize="16sp"
-        tools:ignore="Autofill,HardcodedText,TextFields" />
+        android:background="@drawable/edittext_background"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/logoImageView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Password:"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/passwordEditText2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernameEditText1" />
 
     <EditText
         android:id="@+id/passwordEditText2"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/edittext_background"
-        android:hint="Password"
+        android:hint="Enter Password"
         android:inputType="textPassword"
-        android:minHeight="48dp"
         android:padding="12dp"
-        android:textColor="#000000"
-        android:textColorHint="#546E7A"
-        android:textSize="16sp"
-        tools:ignore="Autofill,HardcodedText,TextFields" />
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/usernameEditText1" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/loginButton"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
+        style="@style/Widget.GuestLogApp.Button"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:text="Login"
-        android:textSize="30sp"
-        android:background="#008000"
-        tools:ignore="HardcodedText,VisualLintButtonSize" />
+        app:layout_constraintTop_toBottomOf="@id/passwordEditText2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/forgotPasswordTextView"
         android:layout_width="wrap_content"
-       android:layout_gravity="center"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Forgot Password"
-        android:textColor="#0000A5"
+        android:text="Forgot Password?"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="15sp"
-        tools:ignore="HardcodedText,TextContrastCheck" />
+        app:layout_constraintTop_toBottomOf="@id/loginButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/registerTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Don't have an Account?Register"
-        android:textColor="#0000A5"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:layout_gravity="center"
         android:layout_marginTop="16dp"
-        tools:ignore="HardcodedText" />
+        android:text="Don't have an account? Register"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/forgotPasswordTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <TextView
+        android:id="@+id/footerTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="© 2024 GuestLog Inc. | Version 1.0"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

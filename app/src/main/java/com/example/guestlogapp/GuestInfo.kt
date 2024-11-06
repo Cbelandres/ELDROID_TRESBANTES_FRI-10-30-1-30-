@@ -65,7 +65,7 @@ class GuestInfo : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n")
     private fun updateGuestDetails(guest: Guest) {
-        guestImageView.setImageResource(R.drawable.guest1_image) // Placeholder, update with actual logic if needed
+        guestImageView.setImageResource(R.drawable.guest_icon) // Placeholder, update with actual logic if needed
         guestNumberTextView.text = "Guest Number: ${guest.number}"
         guestNameTextView.text = "Guest Name: ${guest.name}"
         guestTypeTextView.text = "Guest Type: Regular" // Update with actual type if available
