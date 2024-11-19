@@ -1,0 +1,20 @@
+<resources>
+    <style name="BottomNavStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <!-- Define icon and text colors through color state list -->
+        <item name="itemIconTint">@color/bottom_nav_item_color</item>
+        <item name="itemTextColor">@color/bottom_nav_item_color</item>
+        <item name="itemBackground">@drawable/nav_item_background</item>
+
+        <!-- Add padding directly for better control -->
+        <item name="android:paddingTop">2dp</item>
+    </style>
+
+    <style name="Widget.GuestLogApp.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">#003366</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+</resources>

@@ -1,0 +1,6 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Selected state: text and icon should be white (colorSurface) -->
+    <item android:state_checked="true" android:color="@color/colorSurface" />
+    <!-- Unselected state: text and icon should be black -->
+    <item android:state_checked="false" android:color="@color/bottom_nav_unselected_item" />
+</selector>
