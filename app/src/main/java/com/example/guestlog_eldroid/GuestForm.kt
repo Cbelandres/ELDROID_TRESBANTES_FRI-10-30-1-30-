@@ -7,20 +7,23 @@ import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.button.MaterialButton
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import java.util.UUID
 
 class GuestForm : Fragment() {
 
-    // Access shared ViewModel
-    private val guestViewModel: GuestViewModel by activityViewModels()
+    private lateinit var dbHelper: DatabaseHelper
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_guest_form, container, false)
+
+        dbHelper = DatabaseHelper(requireContext())
 
         val etGuestName = view.findViewById<EditText>(R.id.etGuestName)
         val etGuestEmail = view.findViewById<EditText>(R.id.etGuestEmail)
@@ -31,29 +34,58 @@ class GuestForm : Fragment() {
         val btnSubmit = view.findViewById<MaterialButton>(R.id.btnSubmit)
 
         btnSubmit.setOnClickListener {
-            val name = etGuestName.text.toString()
-            val email = etGuestEmail.text.toString()
-            val timeIn = etTimeIn.text.toString()
-            val date = etDate.text.toString()
-            val phoneNumber = etNumber.text.toString()
-            val age = etAge.text.toString()
+            val name = etGuestName.text.toString().trim()
+            val email = etGuestEmail.text.toString().trim()
+            val timeIn = etTimeIn.text.toString().trim().ifEmpty { null }
+            val date = etDate.text.toString().trim().ifEmpty { null }
+            val phoneNumber = etNumber.text.toString().trim().ifEmpty { null }
+            val age = etAge.text.toString().trim()
 
-            if (name.isNotEmpty() && email.isNotEmpty()) {
-                val guest = Guest(name, email, timeIn, date, phoneNumber, age)
-                guestViewModel.addGuest(guest)
+            if (name.isNotEmpty() && email.isNotEmpty() && age.isNotEmpty()) {
+                val guest = Guest(
+                    id = UUID.randomUUID().toString(),
+                    name = name,
+                    email = email,
+                    timeIn = timeIn,
+                    date = date,
+                    phoneNumber = phoneNumber,
+                    age = age
+                )
 
-                // Navigate to GuestsFragment
-                activity?.supportFragmentManager?.beginTransaction()
-                    ?.replace(R.id.frameLayout, GuestsFragment())
-                    ?.commit()
-
-                val bottomNavigationView = activity?.findViewById<BottomNavigationView>(R.id.bottomNavigationView)
-                bottomNavigationView?.selectedItemId = R.id.nav_guests
+                addGuestToAPIAndDatabase(guest)
             } else {
-                Toast.makeText(activity, "Please fill in all required fields", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Please fill all required fields", Toast.LENGTH_SHORT).show()
             }
         }
 
         return view
     }
+
+    private fun addGuestToAPIAndDatabase(guest: Guest) {
+        ApiClient.guestApiService.addGuest(guest).enqueue(object : Callback<Guest> {
+            override fun onResponse(call: Call<Guest>, response: Response<Guest>) {
+                if (response.isSuccessful) {
+                    // Add guest to SQLite
+                    dbHelper.addGuest(
+                        guest.name, guest.email, guest.timeIn, guest.date,
+                        guest.phoneNumber, guest.age
+                    )
+
+                    Toast.makeText(requireContext(), "Guest added successfully!", Toast.LENGTH_SHORT).show()
+
+                    // Navigate to GuestsFragment
+                    parentFragmentManager.beginTransaction()
+                        .replace(R.id.frameLayout, GuestsFragment())
+                        .commit()
+                } else {
+                    Toast.makeText(requireContext(), "Failed to add guest: ${response.message()}", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            override fun onFailure(call: Call<Guest>, t: Throwable) {
+                Toast.makeText(requireContext(), "Error: ${t.message}", Toast.LENGTH_SHORT).show()
+            }
+        })
+    }
 }
+
