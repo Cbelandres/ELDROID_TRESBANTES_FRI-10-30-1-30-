@@ -25,5 +25,5 @@ interface GuestApiService {
 
     // 5. Delete a guest (DELETE request with ID parameter)
     @DELETE("api/guests/{id}")
-    fun deleteGuest(@Path("id") id: Int): Call<Void>
+    fun deleteGuest(@Path("id") id: String): Call<Void>
 }

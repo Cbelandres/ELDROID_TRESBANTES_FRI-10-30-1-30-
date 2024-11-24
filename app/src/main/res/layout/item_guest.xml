@@ -9,15 +9,31 @@
     android:padding="8dp"
     android:layout_margin="8dp">
 
-    <ImageView
-        android:id="@+id/ivGuestImage"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_gravity="center_vertical"
-        android:src="@drawable/guest_icon"
-        android:layout_marginEnd="16dp"
-        android:scaleType="centerCrop"
-        tools:ignore="ContentDescription" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:paddingTop="20dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ivGuestImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/guest_icon"
+            android:layout_marginBottom="8dp"
+            android:scaleType="centerCrop"
+            tools:ignore="ContentDescription" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDeleteGuest"
+            style="@style/Widget.GuestLogApp.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:layout_gravity="center" />
+    </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
@@ -164,7 +180,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Edit" />
-
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnCheckout"

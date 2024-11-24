@@ -29,7 +29,7 @@ class GuestsFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
         // Initialize adapter with empty list
-        guestsAdapter = GuestsAdapter(mutableListOf(), requireContext())
+        guestsAdapter = GuestsAdapter(mutableListOf(), requireContext(), dbHelper)
         recyclerView.adapter = guestsAdapter
 
         fetchGuestsFromAPI()
