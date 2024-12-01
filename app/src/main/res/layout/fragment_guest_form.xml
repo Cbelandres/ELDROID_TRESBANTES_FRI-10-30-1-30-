@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/nav_item_background"
     android:padding="16dp"
-    tools:context=".GuestForm">
+    tools:context=".ui.GuestForm">
 
     <TextView
         android:id="@+id/tvGuestForm"
@@ -74,13 +74,13 @@
     <TextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Time In:"
+        android:text="Cost"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/etTimeIn"
+        app:layout_constraintBottom_toTopOf="@+id/etCost"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -118,16 +118,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etTimeIn" />
+        app:layout_constraintTop_toBottomOf="@+id/etCost" />
 
     <EditText
-        android:id="@+id/etTimeIn"
+        android:id="@+id/etCost"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:background="@drawable/edittext_background"
-        android:hint="Enter Time In"
-        android:inputType="time"
+        android:hint="Enter COst"
+        android:inputType="numberDecimal"
         android:minHeight="48dp"
         android:padding="12dp"
         android:textColor="#000000"
@@ -154,7 +154,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etTimeIn" />
+        app:layout_constraintTop_toBottomOf="@+id/etCost" />
 
     <TextView
         android:layout_width="0dp"

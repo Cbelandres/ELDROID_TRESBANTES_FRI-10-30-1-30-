@@ -55,5 +55,9 @@ dependencies {
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0") // For Gson serialization
     implementation ("com.squareup.okhttp3:logging-interceptor:4.9.3") // Optional: For logging requests/responses
+    implementation ("com.google.code.gson:gson:2.8.6")
+    implementation ("com.google.android.material:material:1.9.0") //Datepicker dependency
+    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.6.0") // Use the latest version
+
 }
 
